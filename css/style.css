@@ -89,12 +89,13 @@ h3 a {
     background-color: white; 
     border-radius: 4px;
     padding: 7% 0 10% 0;
-    height: 665.5px;
+    
 }
 
 #left-box{
     margin-right: 10px;
     width: 40%;
+    height: 665.5px;
     
 }
 
@@ -102,6 +103,7 @@ h3 a {
     margin-left: 10px;
     width: 60%;
     text-align: left;
+    height: 665.5px;
     
     
 }
