@@ -4,7 +4,9 @@ angular.module("DashmoteTest")
                templateUrl: 'templates/welcome.html' 
             })
                 .when('/profile', {
-                   templateUrl: 'templates/profile.html'
+                   templateUrl: 'templates/profile.html',
+//                   controller: 'ProfileController',
+//                   controllerAs: 'profile'
                 })
                 .when('/', {
                     templateUrl: 'templates/welcome.html'

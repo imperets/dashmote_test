@@ -1,16 +1,16 @@
-<div class="container-fluid box-wrapper vert-align profile-wrapper">
+<div class="container-fluid box-wrapper vert-align profile-wrapper" ng-controller="ProfileController">
     <div class="box" id="left-box">
-        <img src="https://www.looktothestars.org/photo/3-george-clooney/teaser-1379520662.jpg" class="photo">
-        <h3>Christopher Waltz</h3>
-        <h4>username</h4> 
+        <img src="{{photoURL}}" class="photo">
+        <h3>{{firstName | capitalize:true}} {{lastName | capitalize:true}}</h3>
+        <h4>{{username}}</h4> 
 
-        <a href="mailto:waltz@film.com">waltz@film.com</a>
+        <a href="mailto:{{phone}}">{{phone}}</a>
         <div class="address-wrapper">
-            <p>Sophienstra&szlig;e 21</p>
-            <p>10178 Berlin</p>
-            <p>Germany</p>
+            <p>{{street | capitalize:true}}</p>
+            <p>{{zip}} {{city | capitalize:true }}</p>
+            <p>{{state | capitalize:true }}</p>
         </div>
-        <a href="callto:013454566">01 345 45 66</a>
+        <a href="callto:{{phone}}">{{phone}}</a>
     </div>
     <div class="box" id="right-box">
         <form class="form-inline">
@@ -18,47 +18,37 @@
             <h3> Personal </h3>
 
             <div class="form-row">
-                <div class="form-group">  
-                    <input type="text" class="form-control" placeholder="Christof">
+                <div class="form-group" ng-repeat="entry in fullName">  
+                    <input type="text" class="form-control" placeholder="{{entry | capitalize:true}}">
                 </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Waltz">
+            
+                <div class="form-group" ng-repeat="entry in loginDetails">
+                    <input type="text" class="form-control" placeholder="{{entry}}">
                 </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="username">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="waltz@film.com">
-                </div>
+               
             </div>
 
             <h3> Address </h3>
             <div class="form-row">
                 <div class="form-group">  
-                    <input type="text" class="form-control" placeholder="Sophienstra&szlig;e 21">
+                    <input type="text" class="form-control" placeholder="{{street | capitalize:true}}">
                 </div>
                 <div class="form-group">   
-                    <input type="text" class="form-control" placeholder="10178">
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group"> 
-                    <input type="text" class="form-control" placeholder="Berlin">
+                    <input type="text" class="form-control" placeholder="{{zip}}">
                 </div>
                 <div class="form-group"> 
-                    <input type="text" class="form-control" placeholder="Germany">
+                    <input type="text" class="form-control" placeholder="{{city | capitalize:true}}">
                 </div>
-
+                <div class="form-group"> 
+                    <input type="text" class="form-control" placeholder="{{state | capitalize:true}}">
+                </div>
             </div>
 
 
 
             <div class="form-group">
 
-                <input type="text" class="form-control" placeholder="01 345 45 66">
+                <input type="text" class="form-control" placeholder="{{phone}}">
             </div>
 
 
