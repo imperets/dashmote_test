@@ -3,23 +3,17 @@ angular.module("DashmoteTest", ['ngRoute'])
         .controller("ProfileController", ['$http', '$scope', function ($http, $scope) {
 
                 $http.get('https://randomuser.me/api').success(function (data) {
-                    
-                    
+
                     $scope.input = data.results[0].user;
                     $scope.master = angular.copy($scope.input);
-                    
-                    console.log($scope.input);    
+
+                    console.log($scope.input);
 
                     $scope.save = function (data) {
                         $scope.master = angular.copy(data);
                         console.log($scope.master);
                     };
-
-                    
                 });
-
-
-
             }])
 
         .filter('capitalize', function () {

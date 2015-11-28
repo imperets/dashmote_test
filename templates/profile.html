@@ -1,29 +1,26 @@
 <div class="container-fluid box-wrapper vert-align profile-wrapper" ng-controller="ProfileController">
     <div class="box" id="left-box">
         <img src="{{master.picture.medium}}" class="photo">
-        <h3>{{master.name.first | capitalize:true}} {{master.name.last | capitalize:true}}</h3>
+        <h3>{{master.name.first| capitalize:true}} {{master.name.last| capitalize:true}}</h3>
         <h4>{{master.username}}</h4> 
-
         <a href="mailto:{{master.email}}">{{master.email}}</a>
         <div class="address-wrapper">
-            <p>{{master.location.street | capitalize:true}}</p>
-            <p>{{master.location.zip}} {{master.location.city | capitalize:true }}</p>
-            <p>{{master.location.state | capitalize:true }}</p>
+            <p>{{master.location.street| capitalize:true}}</p>
+            <p>{{master.location.zip}} {{master.location.city| capitalize:true }}</p>
+            <p>{{master.location.state| capitalize:true }}</p>
         </div>
         <a href="callto:{{master.phone}}">{{master.phone}}</a>
     </div>
     <div class="box" id="right-box">
         <form class="form-inline"  ng-submit="save(input)">
-
             <h3> Personal </h3>
-            
             <div class="form-row">
                 <div class="form-group">  
-                    <input type="text" class="form-control" ng-model="input.name.first" placeholder="{{input.name.first | capitalize:true}}">
+                    <input type="text" class="form-control" ng-model="input.name.first" placeholder="{{input.name.first| capitalize:true}}">
                 </div>
-            
+
                 <div class="form-group">
-                    <input type="text" class="form-control" ng-model="input.name.last" placeholder="{{input.name.last | capitalize:tru}}">
+                    <input type="text" class="form-control" ng-model="input.name.last" placeholder="{{input.name.last| capitalize:tru}}">
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" ng-model="input.username" placeholder="{{input.username}}">
@@ -31,33 +28,27 @@
                 <div class="form-group">
                     <input type="text" class="form-control" ng-model="input.email" placeholder="{{input.email}}">
                 </div>
-               
             </div>
 
             <h3> Address </h3>
             <div class="form-row">
                 <div class="form-group">  
-                    <input type="text" class="form-control"  ng-model="input.location.street" placeholder="{{input.location.street | capitalize:true}}">
+                    <input type="text" class="form-control"  ng-model="input.location.street" placeholder="{{input.location.street| capitalize:true}}">
                 </div>
                 <div class="form-group">   
                     <input type="text" class="form-control"  ng-model="input.location.zip"  placeholder="{{input.location.zip}}">
                 </div>
                 <div class="form-group"> 
-                    <input type="text" class="form-control" ng-model="input.location.city"  placeholder="{{input.location.city | capitalize:true}}">
+                    <input type="text" class="form-control" ng-model="input.location.city"  placeholder="{{input.location.city| capitalize:true}}">
                 </div>
                 <div class="form-group"> 
-                    <input type="text" class="form-control"  ng-model="input.location.state" placeholder="{{input.location.state | capitalize:true}}">
+                    <input type="text" class="form-control"  ng-model="input.location.state" placeholder="{{input.location.state| capitalize:true}}">
                 </div>
             </div>
-
-
-
             <div class="form-group">
 
                 <input type="text" class="form-control"  ng-model="input.phone" placeholder="{{input.phone}}">
             </div>
-
-
             <input type="submit" class="btn btn-default button" value="Save"/>
         </form>
 
